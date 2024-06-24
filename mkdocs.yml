@@ -1,0 +1,48 @@
+site_name: Test Deployment
+site_url: https://akeemallen.github.io/test-deployment
+site_description: A test of deployment
+site_author: AkeemAllen
+repo_url: https://github.com/AkeemAllen/test-deployment
+theme:
+  name: material
+  features:
+  - content.tabls.links
+  - content.tooltips
+  favicon: img/items/poke-ball.png
+  palette:
+  - media: '(prefers-color-scheme: light)'
+    primary: black
+    scheme: default
+    toggle:
+      icon: material/eye-outline
+      name: Switch to dark mode
+  - media: '(prefers-color-scheme: dark)'
+    primary: black
+    scheme: default
+    toggle:
+      icon: material/eye
+      name: Switch to light mode
+nav:
+- Home: index.md
+- Type Changes: type_changes.md
+- Pokemon:
+  - 001 - Bulbasaur: pokemon/001.md
+- Routes:
+  - Route 1:
+    - Wild Encounter: routes/Route 1/wild_encounters.md
+    - Trainers: routes/Route 1/trainers.md
+plugins:
+- search:
+    lang: en
+markdown_extensions:
+- admonition
+- abbr
+- attr_list
+- pymdownx.snippets
+- pymdownx.superfences
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tabbed:
+    alternate_style: true
+extra_css:
+- stylesheets/extra.css
